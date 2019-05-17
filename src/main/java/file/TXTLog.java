@@ -2,6 +2,9 @@ package file;
 
 import java.io.*;
 
+/**
+ * txt文件内容替换
+ */
 public class TXTLog {
 
     public static void main(String[] args) throws IOException {
