@@ -2,14 +2,13 @@ package file;
 
 import java.io.*;
 
+/**
+ * txt文件内容替换
+ */
 public class TXTLog {
 
     public static void main(String[] args) throws IOException {
-        long begin = System.currentTimeMillis();
         replace("/Users/zhangbo/Downloads/pid_score_20190516.txt");
-        long end = System.currentTimeMillis();
-        System.out.println("done.......");
-        System.out.println(String.format("times : %s", (end - begin) / 1000));
     }
 
     private static void replace(String filePath) throws IOException {
