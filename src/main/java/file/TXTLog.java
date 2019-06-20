@@ -26,7 +26,7 @@ public class TXTLog {
                 continue;
             }
             buf.append(row.substring(1, row.length() - 1));
-            buf = buf.append(System.getProperty("line.separator"));
+            buf.append(System.getProperty("line.separator"));
         }
         br.close();
         FileOutputStream fos = new FileOutputStream(file);
