@@ -49,13 +49,13 @@ public class CSVLog {
     /**
      * 写入文件
      *
-     * @param cells    内容
-     * @param filePath 目标路径
-     * @param skipLast 是否跳过最后一行
+     * @param cells      内容
+     * @param targetPath 目标路径
+     * @param skipLast   是否跳过最后一行
      * @throws IOException 异常
      */
-    private static void writeFile(List<String> cells, String filePath, boolean skipLast) throws IOException {
-        File file = new File(filePath);
+    private static void writeFile(List<String> cells, String targetPath, boolean skipLast) throws IOException {
+        File file = new File(targetPath);
         if (!file.exists()) {
             file.createNewFile();
         }
@@ -63,7 +63,7 @@ public class CSVLog {
         if (skipLast == Boolean.TRUE) {
             cells.remove(cells.size() - 1);
         }
-        BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, Boolean.TRUE));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(targetPath, Boolean.TRUE));
         for (String item : cells) {
             bw.write(item);
             bw.newLine();
