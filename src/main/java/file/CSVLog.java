@@ -35,9 +35,9 @@ public class CSVLog {
 
         while (reader.readRecord()) {
             StringBuffer sb = new StringBuffer();
-            String[] line = reader.getValues();
-            for (int i = 0; i < line.length; i++) {
-                sb.append(line[i]);
+            String[] row = reader.getValues();
+            for (int i = 0; i < row.length; i++) {
+                sb.append(row[i]);
                 sb.append("|");
             }
             cells.add(sb.toString().replace("\r", "").substring(0, sb.length() - 1));
